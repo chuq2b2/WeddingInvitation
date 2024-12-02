@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        'sm-plus': '14px', // A size between sm and md
+      },
     },
   },
   plugins: [],
