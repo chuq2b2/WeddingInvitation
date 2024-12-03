@@ -21,6 +21,11 @@
   font-style: normal;
 }
 
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
 body {
   color: var(--background);
   background-color: var(--bg-overlay-color);
@@ -30,4 +35,16 @@ body {
 nav {
   font-family: 'Avenir', sans-serif;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+      justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .logo-container {
+      justify-content: flex-start;
+  }
 }
