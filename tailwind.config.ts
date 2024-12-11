@@ -15,6 +15,9 @@ export default {
       fontSize: {
         'sm-plus': '14px', // A size between sm and md
       },
+      fontFamily: {
+        fraunces: ['Fraunces', 'serif'], // Adding Fraunces font to Tailwind's theme
+      },
     },
   },
   plugins: [],
