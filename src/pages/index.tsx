@@ -51,12 +51,12 @@ export default function Home() {
   </div>
 
     <div className="flex flex-col md:flex-row h-screen">      
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6">
-      <EventInfo location="Hanoi" date="Thursday, June 12, 2025" schedule={scheduleHanoi} />
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center ">
+      <EventInfo location="Hanoi" date="Thursday, June 12, 2025" hotel="Hotel in Hanoi" schedule={scheduleHanoi} />
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6">
-      <EventInfo location="Guangzhou" date="Saturday, June 21, 2025" schedule={scheduleGuangzhou} />
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center ">
+      <EventInfo location="Guangzhou" date="Saturday, June 21, 2025" hotel="Hotel in Guangzhou" schedule={scheduleGuangzhou} />
       </div>
         
     </div>
