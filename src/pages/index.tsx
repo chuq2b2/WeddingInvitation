@@ -1,5 +1,4 @@
 import Image from "next/image";
-import localFont from "next/font/local";
 import NavBar from "@/components/NavBar";
 import EventInfo from "@/components/EventInfo";
 
@@ -18,7 +17,7 @@ const scheduleGuangzhou = [
 export default function Home() {
   return (
     <>
-    <NavBar />
+    {/* Home Page */}
     <div className="flex flex-col md:flex-row h-screen">
       {/* Left Side with Text */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6">
@@ -48,20 +47,93 @@ export default function Home() {
               backgroundImage: "url('/Linh-5.jpg')",
           }}
       ></div>
-  </div>
-
-    <div className="flex flex-col md:flex-row h-screen">      
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center ">
-      <EventInfo location="Hanoi" date="Thursday, June 12, 2025" hotel="Hotel in Hanoi" schedule={scheduleHanoi} />
-      </div>
-
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center ">
-      <EventInfo location="Guangzhou" date="Saturday, June 21, 2025" hotel="Hotel in Guangzhou" schedule={scheduleGuangzhou} />
-      </div>
-        
     </div>
 
+    {/* Home RSVP */}
+    <div id="rsvp" className="flex flex-col md:flex-row space-y-10 md:space-y-0 h-screen p-8 md:p-12 gap-5">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
+        <EventInfo
+          location="Hanoi"
+          date="Thursday, June 12, 2025"
+          hotel="Hotel in Hanoi"
+          schedule={scheduleHanoi}
+        />
+      </div>
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
+        <EventInfo
+          location="Guangzhou"
+          date="Saturday, June 21, 2025"
+          hotel="Hotel in Guangzhou"
+          schedule={scheduleGuangzhou}
+        />
+      </div>
+    </div>
+    <div className="h-40 md:h-0 bg-white"></div>
 
+    <div className="h-screen parallax-full bg-gradient-to-r flex items-center justify-center pt-50"
+    style={{
+      backgroundImage: "url('/Linh-30.jpg')"
+    }}>
+      <Image
+        src="/signature-white.avif"
+        alt="Signature"
+        width={1052}
+        height={322}
+        style={{ width: '1052px', height: '322px' }}
+        priority={false}
+        className="object-contain filter brightness-200 w-auto h-auto"
+      />
+    </div>
+
+    <div className="h-80"></div>
+    {/* Home Our Story */}
+    <div id="our-story" className="h-screen ">
+      <div className="grid grid-cols-12 gap-4 h-full">
+        <div className="col-span-2 overflow-hidden">
+          <div
+            className="h-full w-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/Linh-2.jpg')" }}
+          ></div>
+        </div>
+        <div className="col-span-6">
+          <div
+            className="h-full w-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/Linh-1.jpg')" }}
+          ></div>
+        </div>
+        <div className="col-span-4 flex flex-col justify-center bg-cover bg-center row-span-2"
+          style={{backgroundImage: "url('/Linh-26.jpg')"}}>
+          <div className="bg-white p-8">
+            <h3 className="text-4xl mb-4 didot">Our Love Story</h3>
+            <p className="text-[#383B42] avenir">
+              In the heart of Boston's cadence, two souls converged, their paths
+              unwinding like a gentle river through the cityscape. Moments of
+              serendipity became their guide, where laughter echoed amidst the hum of
+              daily life. Hand in hand, they wove their way through the familiar
+              streets, each step a silent testament to the bond that grew between
+              them.
+            </p>
+            <p className="mt-4 text-[#383B42] avenir">
+              Their love, quiet and steadfast, blossomed in the simplicity of shared
+              routines and whispered promises under the city lights.
+            </p>
+          </div>
+          
+        </div>
+        <div className="col-span-6">
+          <div
+            className="h-full w-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/Linh-26.jpg')" }}
+          ></div>
+        </div>
+        <div className="col-span-2 overflow-hidden">
+          <div
+            className="h-full w-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/Linh-33.jpg')" }}
+          ></div>
+        </div>
+      </div>
+    </div>
     </>
     
     

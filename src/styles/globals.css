@@ -45,12 +45,14 @@
 html, body{
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--background);
   background-color: var(--bg-overlay-color);
   font-family: Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -89,6 +91,13 @@ nav {
   background-position: 100% center;
   background-repeat: no-repeat;
   background-size: 50%; /* Ensures the entire image is visible */
+}
+
+.parallax-full {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%; /* Ensures the entire image is visible */
 }
 
 @media (max-width: 768px) {
