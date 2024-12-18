@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
           We Hope To See You Soon!
         </h2>
         <Image
-            src="/signature.avif"
-            alt="Signature"
-            width={214}
-            height={48}
-            style={{ width: '214px', height: '48px' }}
-            priority={false}
+          src="/signature.avif"
+          alt="Signature"
+          width={214}
+          height={48}
+          style={{ width: "214px", height: "48px" }}
+          priority={false}
         />
         <p className="mb-2 avenir pt-2">Contact Us</p>
         <p className="text-sm text-gray-600 avenir">© 2024 by Jack & Linh</p>
