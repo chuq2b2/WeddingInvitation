@@ -97,11 +97,18 @@ nav {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%; /* Ensures the entire image is visible */
+  background-size: cover; /* Ensures the entire image is visible */
+}
+
+.parallax-grid {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 768px) {
-  .parallax {
+  .parallax, .parallax-full {
     background-attachment: scroll; /* Disable fixed attachment on small screens */
     background-size: cover; /* Make the image cover the area, zooming in */
     background-position: center center; /* Center the image on smaller screens */

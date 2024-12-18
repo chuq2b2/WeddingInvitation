@@ -193,7 +193,7 @@ function NavBar() {
                     </li>
                     <li>
                         <a
-                            href="#resgistry"
+                            href="#registry"
                             className={`text-sm-plus text-[#383B42] transition-colors ${
                                 activeLink === '#registry' ? 'text-[#A0AC60]' : 'hover:text-[#A0AC60]'
                             }`}
