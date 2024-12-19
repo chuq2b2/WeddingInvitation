@@ -1,7 +1,15 @@
+import EventInvite from "@/components/Invite";
+import { eventDetails } from "@/components/EventDetails";
+
 export default function GuangzhouWedding() {
+  const guangzhou = eventDetails.guangzhou;
   return (
     <>
-      <h1>GuangZhou</h1>
+      <EventInvite
+        location={guangzhou.location}
+        date={guangzhou.date}
+        hotel={guangzhou.hotel}
+      />
     </>
   );
 }
