@@ -178,7 +178,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="#rsvp"
+              href="/#rsvp"
               className={`text-sm-plus ${
                 activeLink === "#rsvp" ? "text-[#A0AC60]" : "text-[#383B42]"
               } hover:text-[#A0AC60]`}
@@ -187,30 +187,33 @@ function NavBar() {
               RSVP
             </a>
           </li>
+          <li className="text-sm-plus text-[#383B42]">
+            TRAVEL GUIDE
+          </li>
           <li>
             <Link
-              href="/travel-guide"
-              className={`text-sm-plus ${
-                activeLink === "/travel-guide"
+              href="/event-details/hanoi-wedding"
+              className={`text-sm ${
+                activeLink === "/event-details/hanoi-wedding"
                   ? "text-[#A0AC60]"
-                  : "text-[#383B42]"
+                  : "text-[#585a5e]"
               } hover:text-[#A0AC60]`}
               onClick={() => handleLinkClick("/travel-guide")}
             >
-              TRAVEL GUIDE
+              HANOI
             </Link>
           </li>
           <li>
             <Link
-              href="/travel-guide"
-              className={`text-sm-plus ${
-                activeLink === "/travel-guide"
+              href="/event-details/guangzhou-wedding"
+              className={`text-sm ${
+                activeLink === "/event-details/guangzhou-wedding"
                   ? "text-[#A0AC60]"
-                  : "text-[#383B42]"
+                  : "text-[#585a5e]"
               } hover:text-[#A0AC60]`}
               onClick={() => handleLinkClick("/travel-guide")}
             >
-              TRAVEL GUIDE
+              GUANGZHOU
             </Link>
           </li>
           <li>
@@ -226,7 +229,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="#our-story"
+              href="/#our-story"
               className={`text-sm-plus ${
                 activeLink === "#our-story"
                   ? "text-[#A0AC60]"
@@ -239,7 +242,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="#registry"
+              href="/#registry"
               className={`text-sm-plus text-[#383B42] transition-colors ${
                 activeLink === "#registry"
                   ? "text-[#A0AC60]"
@@ -252,7 +255,7 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="#qnas"
+              href="/#qnas"
               className={`text-sm-plus text-[#383B42] transition-colors ${
                 activeLink === "#qnas"
                   ? "text-[#A0AC60]"
