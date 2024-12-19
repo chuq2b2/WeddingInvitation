@@ -10,7 +10,6 @@ export default function HanoiWedding() {
         date={hanoi.date}
         hotel={hanoi.hotel}
       />
-      <h1>Hanoi</h1>
     </>
   );
 }
