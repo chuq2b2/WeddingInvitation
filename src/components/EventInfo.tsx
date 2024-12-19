@@ -39,7 +39,7 @@ const EventInfo: React.FC<EventInfoProps> = ({
         ))}
       </div>
       <div className="text-center mt-6">
-        <a href={rsvpHref} className="bg-[#A0AC60] text-white p-2 rounded-full pl-4 pr-4">
+        <a href={rsvpHref} className="bg-[#A0AC60] text-white p-2 rounded-full pl-4 pr-4 hover:bg-white hover:opacity-50 hover:text-black border-1 hover:border-black hover:border-solid border-transparent border-2 transition duration-300 ease-in-out">
           RSVP
         </a>
       </div>
