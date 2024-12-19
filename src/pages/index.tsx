@@ -1,21 +1,12 @@
 import Image from "next/image";
 import EventInfo from "@/components/EventInfo";
 import Carousel from "@/components/Carousel";
-import Registry from "@/components/Registry";
+import {eventDetails} from "@/components/EventDetails";
 
-const scheduleHanoi = [
-  { time: "9 am", name: "Engagement Ceremony", rsvpDate: "May 31, 2025" },
-  { time: "5 pm", name: "Wedding Reception", rsvpDate: "May 31, 2025" },
-  { time: "6 pm", name: "Wedding Banquet", rsvpDate: "May 31, 2025" },
-];
-
-const scheduleGuangzhou = [
-  { time: "9 am", name: "Engagement Ceremony", rsvpDate: "May 31, 2025" },
-  { time: "5 pm", name: "Wedding Reception", rsvpDate: "May 31, 2025" },
-  { time: "6 pm", name: "Wedding Banquet", rsvpDate: "May 31, 2025" },
-];
 
 export default function Home() {
+  const hanoiDetails = eventDetails.hanoi;
+  const guangzhouDetails = eventDetails.guangzhou
   return (
     <>
       {/* Home Page */}
@@ -71,18 +62,20 @@ export default function Home() {
       >
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
           <EventInfo
-            location="Hanoi"
-            date="Thursday, June 12, 2025"
-            hotel="Hotel in Hanoi"
-            schedule={scheduleHanoi}
+            location={hanoiDetails.location}
+            date={hanoiDetails.date}
+            hotel={hanoiDetails.hotel}
+            schedule={hanoiDetails.schedule}
+            rsvpHref={hanoiDetails.rsvpHref}
           />
         </div>
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
           <EventInfo
-            location="Guangzhou"
-            date="Saturday, June 21, 2025"
-            hotel="Hotel in Guangzhou"
-            schedule={scheduleGuangzhou}
+            location={guangzhouDetails.location}
+            date={guangzhouDetails.date}
+            hotel={guangzhouDetails.hotel}
+            schedule={guangzhouDetails.schedule}
+            rsvpHref={guangzhouDetails.rsvpHref}
           />
         </div>
       </div>
@@ -183,16 +176,11 @@ export default function Home() {
       <div className="h-60 bg-white"></div>
 
       <div
-        id="registry"
         className="h-screen parallax-full bg-gradient-to-r sm:relative pt-50"
         style={{
           backgroundImage: "url('/Linh-13.png')",
         }}
-      >
-        <div className="sm:absolute sm:inset-0 h-full flex items-center justify-center sm:justify-end">
-          <Registry/>
-        </div>
-      </div>
+      ></div>
     </>
   );
 }
