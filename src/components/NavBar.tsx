@@ -5,6 +5,8 @@ import { useState } from "react";
 function NavBar() {
   const [activeLink, setActiveLink] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
 
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
@@ -76,7 +78,32 @@ function NavBar() {
         >
           RSVP
         </a>
-        <Link
+        <div 
+          className="relative group" 
+          onMouseEnter={() => setIsDropdownOpen(true)} 
+        >
+          <Link
+            href="/travel-guide"
+            className={`text-sm-plus text-[#383B42] transition-colors ${
+              activeLink === "/travel-guide" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
+            }`}
+            onClick={() => handleLinkClick("/travel-guide")}
+          >
+            TRAVEL GUIDE
+          </Link>
+          {/* Dropdown Menu */}
+          {isDropdownOpen && (
+            <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
+              <Link href="/event-details/hanoi-wedding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => handleLinkClick("/travel-guide/option1")}>
+                HANOI
+              </Link>
+              <Link href="/event-details/guangzhou-wedding" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => handleLinkClick("/travel-guide/option2")}>
+                GUANGZHOU
+              </Link>
+            </div>
+          )}
+        </div>
+        {/* <Link
           href="/travel-guide"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "/travel-guide"
@@ -86,7 +113,7 @@ function NavBar() {
           onClick={() => handleLinkClick("/travel-guide")}
         >
           TRAVEL GUIDE
-        </Link>
+        </Link> */}
         <Link
           href="/gallery"
           className={`text-sm-plus text-[#383B42] transition-colors ${
@@ -159,6 +186,19 @@ function NavBar() {
             >
               RSVP
             </a>
+          </li>
+          <li>
+            <Link
+              href="/travel-guide"
+              className={`text-sm-plus ${
+                activeLink === "/travel-guide"
+                  ? "text-[#A0AC60]"
+                  : "text-[#383B42]"
+              } hover:text-[#A0AC60]`}
+              onClick={() => handleLinkClick("/travel-guide")}
+            >
+              TRAVEL GUIDE
+            </Link>
           </li>
           <li>
             <Link

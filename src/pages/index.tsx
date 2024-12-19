@@ -1,6 +1,7 @@
 import Image from "next/image";
 import EventInfo from "@/components/EventInfo";
 import Carousel from "@/components/Carousel";
+import Registry from "@/components/Registry";
 
 const scheduleHanoi = [
   { time: "9 am", name: "Engagement Ceremony", rsvpDate: "May 31, 2025" },
@@ -183,11 +184,15 @@ export default function Home() {
 
       <div
         id="registry"
-        className="h-screen parallax-full bg-gradient-to-r flex items-center justify-center pt-50"
+        className="h-screen parallax-full bg-gradient-to-r sm:relative pt-50"
         style={{
           backgroundImage: "url('/Linh-13.png')",
         }}
-      ></div>
+      >
+        <div className="sm:absolute sm:inset-0 h-full flex items-center justify-center sm:justify-end">
+          <Registry/>
+        </div>
+      </div>
     </>
   );
 }
