@@ -129,33 +129,19 @@ export default function Home() {
                 className="h-full w-full bg-cover bg-center justify-center"
                 style={{ backgroundImage: "url('/Linh-26.jpg')" }}
               >
-                <div className="bg-white justify-center absolute flex flex-col inset-y-16 -mx-10 px-16">
+                <div className="bg-white justify-center absolute flex flex-col inset-y-8 -mx-10 px-16">
                   <h3 className="text-5xl mb-4 didot font-bold text-right">
                     Our Love Story
                   </h3>
                   <p className="text-[#383B42] avenir">
-                    In the heart of Boston's cadence, two souls converged, their
-                    paths unwinding like a gentle river through the cityscape.
-                    Moments of serendipity became their guide, where laughter
-                    echoed amidst the hum of daily life. Hand in hand, they wove
-                    their way through the familiar streets, each step a silent
-                    testament to the bond that grew between them.
+                  Jack and Linh first met in Boston, USA in 2019, where their love story began. What started as a Coffee Meets Bagel date quickly turned into something deeper as they navigated their early days together. Then came the pandemic, a time that brought unexpected challenges but also the chance to grow closer. They spent those uncertain months side by side, sharing laughter, resilience, and the ups and downs of their early 20s.
                   </p>
                   <p className="mt-4 text-[#383B42] avenir">
-                    When the time was right, they took the leap, trading
-                    cobblestone for skyscrapers, and Boston’s charm for New
-                    York’s endless rhythm. Amidst the urban sprawl, they found
-                    solace in each other's presence. Their love, quiet and
-                    steadfast, blossomed in the simplicity of shared routines
-                    and whispered promises under the city lights.
+                  Life continued to evolve, with career changes and the big move to New York City in 2022. There, they have both pursued new opportunities. Linh is currently pursuing her PhD in Biomedical Sciences while Jack is working full time in finance and pursuing his part-time MBA. They have continued to lean on each other as they build a life in a city full of endless possibilities. Along the way, they welcomed a maltipoo “Vivy” to their family, whose wagging tail brought even more joy to their everyday lives. 
                   </p>
                   <p className="mt-4 text-[#383B42] avenir">
-                    In the grandeur of the mundane, Jack and Linh carved out a
-                    world that was theirs alone. Not defined by grand gestures,
-                    but by the quiet strength found in everyday moments. Their
-                    love story, a tapestry of gentle touches and understanding
-                    glances, continues to unfold, a beautiful narrative of
-                    life's simplest yet most profound joys.
+                  After 4 years of growing together, they decided to take the next step and tie the knot on Aug 18th, 2023 in New York City. Now when the time is right, they decided to hold the wedding ceremonies to celebrate their love with their families and friends in Linh’s hometown (Hanoi, Vietnam), and Jack’s family’s hometown (Guangzhou, China). 
+
                   </p>
                 </div>
               </div>

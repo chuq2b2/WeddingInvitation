@@ -5,6 +5,7 @@ import React from "react";
 interface ScheduleItem {
   time: string;
   name: string;
+  location: string;
   rsvpDate: string;
 }
 
@@ -33,8 +34,14 @@ const EventInfo: React.FC<EventInfoProps> = ({
       <div className="mt-4 avenir text-base">
         {schedule.map((event, index) => (
           <div key={index} className="flex justify-between mt-2">
-            <span className="text-[#A0AC60]">{event.time}</span>
-            <span>{event.name}</span>
+            <span className="text-[#A0AC60] font-bold text-xl ">{event.time}</span>
+            <span>
+              <div className="flex-col text-end justify-end">
+              {event.name} 
+              <br></br>
+              {event.location}
+              </div>
+            </span>
           </div>
         ))}
       </div>
