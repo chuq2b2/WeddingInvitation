@@ -1,6 +1,6 @@
 import EventInvite from "@/components/Invite";
 import Map from "@/components/Map";
-import { eventDetails } from "@/components/EventDetails";
+import { eventDetails } from "@/components/details/EventDetails";
 
 export default function HanoiWedding() {
   const hanoi = eventDetails.hanoi;
