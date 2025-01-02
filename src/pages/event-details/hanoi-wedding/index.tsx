@@ -1,9 +1,23 @@
+import { useState } from "react";
 import EventInvite from "@/components/Invite";
 import Map from "@/components/Map";
 import { eventDetails } from "@/components/details/EventDetails";
+import { Button } from "@/components/ui/button";
+import { Backpack, CircleDollarSign } from "lucide-react";
+import TravelDocument from "@/components/details/hanoi/TravelDocument";
+import MoneyAndCurrency from "@/components/details/hanoi/MoneyAndCurrency";
+
+type ContentKey = "travelDocument" | "moneyAndCurrency";
+
+const contentMap: Record<ContentKey, JSX.Element> = {
+  travelDocument: <TravelDocument />,
+  moneyAndCurrency: <MoneyAndCurrency />,
+};
 
 export default function HanoiWedding() {
-  const hanoi = eventDetails.hanoi;
+  const [activeContent, setActiveContent] = useState<ContentKey | "none">(
+    "none"
+  );  const hanoi = eventDetails.hanoi;
   const mapCenter = { lat: 21.028511, lng: 105.804817 };
   const mapMarkers = [
     {
@@ -15,6 +29,11 @@ export default function HanoiWedding() {
       position: { lat: 23.12911, lng: 113.264385 },
     },
   ];
+
+  const buttonClasses = (isActive: boolean) =>
+    `px-4 py-2 rounded-md transition ${
+      isActive ? "bg-gray-800 text-white" : "hover:bg-gray-300"
+    }`;
 
   return (
     <>
@@ -40,6 +59,30 @@ export default function HanoiWedding() {
             markers={mapMarkers}
           />
         </div>
+      </div>
+
+      <Button
+        variant="outline"
+        className={buttonClasses(activeContent === "travelDocument")}
+        onClick={() => setActiveContent("travelDocument")}
+      >
+        <Backpack />
+        Travel Document
+      </Button>
+
+      <Button
+        variant="outline"
+        className={buttonClasses(activeContent === "moneyAndCurrency")}
+        onClick={() => setActiveContent("moneyAndCurrency")}
+      >
+        <CircleDollarSign />
+        Money And Currency
+      </Button>
+
+      <div className="mt-8">
+        {activeContent !== "none"
+          ? contentMap[activeContent]
+          : <div></div>}
       </div>
     </>
   );
