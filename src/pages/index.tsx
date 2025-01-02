@@ -1,12 +1,13 @@
 import Image from "next/image";
 import EventInfo from "@/components/EventInfo";
 import Carousel from "@/components/Carousel";
-import {eventDetails} from "@/components/EventDetails";
-
+import { eventDetails } from "@/components/details/EventDetails";
+import { qnaDetails } from "@/components/details/QuestionAndAnswerDetails";
+import QuestionAndAnswer from "@/components/QuestionAndAnswer";
 
 export default function Home() {
   const hanoiDetails = eventDetails.hanoi;
-  const guangzhouDetails = eventDetails.guangzhou
+  const guangzhouDetails = eventDetails.guangzhou;
   return (
     <>
       {/* Home Page */}
@@ -134,14 +135,33 @@ export default function Home() {
                     Our Love Story
                   </h3>
                   <p className="text-[#383B42] avenir">
-                  Jack and Linh first met in Boston, USA in 2019, where their love story began. What started as a Coffee Meets Bagel date quickly turned into something deeper as they navigated their early days together. Then came the pandemic, a time that brought unexpected challenges but also the chance to grow closer. They spent those uncertain months side by side, sharing laughter, resilience, and the ups and downs of their early 20s.
+                    Jack and Linh first met in Boston, USA in 2019, where their
+                    love story began. What started as a Coffee Meets Bagel date
+                    quickly turned into something deeper as they navigated their
+                    early days together. Then came the pandemic, a time that
+                    brought unexpected challenges but also the chance to grow
+                    closer. They spent those uncertain months side by side,
+                    sharing laughter, resilience, and the ups and downs of their
+                    early 20s.
                   </p>
                   <p className="mt-4 text-[#383B42] avenir">
-                  Life continued to evolve, with career changes and the big move to New York City in 2022. There, they have both pursued new opportunities. Linh is currently pursuing her PhD in Biomedical Sciences while Jack is working full time in finance and pursuing his part-time MBA. They have continued to lean on each other as they build a life in a city full of endless possibilities. Along the way, they welcomed a maltipoo “Vivy” to their family, whose wagging tail brought even more joy to their everyday lives. 
+                    Life continued to evolve, with career changes and the big
+                    move to New York City in 2022. There, they have both pursued
+                    new opportunities. Linh is currently pursuing her PhD in
+                    Biomedical Sciences while Jack is working full time in
+                    finance and pursuing his part-time MBA. They have continued
+                    to lean on each other as they build a life in a city full of
+                    endless possibilities. Along the way, they welcomed a
+                    maltipoo “Vivy” to their family, whose wagging tail brought
+                    even more joy to their everyday lives.
                   </p>
                   <p className="mt-4 text-[#383B42] avenir">
-                  After 4 years of growing together, they decided to take the next step and tie the knot on Aug 18th, 2023 in New York City. Now when the time is right, they decided to hold the wedding ceremonies to celebrate their love with their families and friends in Linh’s hometown (Hanoi, Vietnam), and Jack’s family’s hometown (Guangzhou, China). 
-
+                    After 4 years of growing together, they decided to take the
+                    next step and tie the knot on Aug 18th, 2023 in New York
+                    City. Now when the time is right, they decided to hold the
+                    wedding ceremonies to celebrate their love with their
+                    families and friends in Linh’s hometown (Hanoi, Vietnam),
+                    and Jack’s family’s hometown (Guangzhou, China).
                   </p>
                 </div>
               </div>
@@ -167,6 +187,17 @@ export default function Home() {
           backgroundImage: "url('/Linh-13.png')",
         }}
       ></div>
+
+      {/* Home Question And Answer */}
+      <div
+        id="qnas"
+        className="h-screen justify-center flex flex-col items-center"
+      >
+        <h1 className="fraunces font-bold lg:text-5xl text-3xl my-10 text-[#A0AC60]">
+          Questions and Answers
+        </h1>
+        <QuestionAndAnswer qna={qnaDetails.number}/>
+      </div>
     </>
   );
 }

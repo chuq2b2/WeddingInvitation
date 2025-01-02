@@ -1,20 +1,35 @@
 import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const QuestionAndAnswer = () => {
+interface QNAItems {
+  question: string;
+  answer: string;
+}
+
+interface QuestionAndAnswerProps {
+  qna: QNAItems[];
+}
+
+const QuestionAndAnswer: React.FC<QuestionAndAnswerProps> = ({ qna }) => {
   return (
-    <div className="bg-white opacity-80 md:w-1/3">
-      <h1 className="fraunces font-semibold text-6xl py-10 px-5 text-[#383B42]">
-        Registry
-      </h1>
-      <p className="avenir text-md px-5 text-[#383B42]">
-        Support our journey, your contribution will help us fill our future with
-        memories and joy!
-      </p>
-      <div className="px-5 py-10">
-        <button className="bg-[#A0AC60] text-white p-2 w-full opacity-100 hover:text-black hover:border-black hover:border-solid hover:bg-white border-transparent border-2 transition duration-300 ease-in-out">
-          Donate
-        </button>
-      </div>
+    <div className="w-2/3 justify-center avenir">
+      {qna.map((event, index) => (
+        <Accordion type="single" collapsible>
+          <AccordionItem value='f{index}'>
+            <AccordionTrigger className="font-bold md:text-lg">
+              {index+1}. {event.question}
+            </AccordionTrigger>
+            <AccordionContent>
+              {event.answer}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      ))}
     </div>
   );
 };
