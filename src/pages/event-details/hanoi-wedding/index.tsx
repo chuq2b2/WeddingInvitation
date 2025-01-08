@@ -2,28 +2,40 @@ import { useState } from "react";
 import EventInvite from "@/components/Invite";
 import Map from "@/components/Map";
 import { eventDetails } from "@/components/details/EventDetails";
-import { Button } from "@/components/ui/button";
-import { Backpack, CircleDollarSign, Signal, Cross, Syringe } from "lucide-react";
 import TravelDocument from "@/components/details/hanoi/TravelDocument";
 import MoneyAndCurrency from "@/components/details/hanoi/MoneyAndCurrency";
 import SIM from "@/components/details/hanoi/SIM";
 import HealthInsurance from "@/components/details/hanoi/HealthInsurance";
 import Immunization from "@/components/details/hanoi/Immunization";
+import TravelTips from "@/components/details/TravelTips";
+import Accommodation from "@/components/details/hanoi/Accommodation";
+import Transportation from "@/components/details/hanoi/Transportation";
+import PlugsAndVoltage from "@/components/details/hanoi/PlugsAndVoltage";
+import TakesOut from "@/components/details/hanoi/TakesOut";
+import Navigation from "@/components/details/hanoi/Navigation";
+import WhatToDo from "@/components/details/hanoi/WhatToDo";
+import WhereToEat from "@/components/details/hanoi/WhereToEat";
 
-type ContentKey = "travelDocument" | "moneyAndCurrency" | "sim" | "healthInsurance" | "immunization";
 
-const contentMap: Record<ContentKey, JSX.Element> = {
+const contentMap = {
   travelDocument: <TravelDocument />,
   moneyAndCurrency: <MoneyAndCurrency />,
-  sim: <SIM />,
-  healthInsurance: <HealthInsurance/>,
-  immunization: <Immunization/>
+  SIM: <SIM />,
+  healthInsurance: <HealthInsurance />,
+  immunization: <Immunization />,
+  accommodation: <Accommodation/>,
+  transportation: <Transportation/>,
+  plugsAndVoltage: <PlugsAndVoltage/>,
+  takesOut: <TakesOut/>,
+  navigation: <Navigation/>,
+  whatToDo: <WhatToDo/>,
+  whereToEat: <WhereToEat/>
 };
 
 export default function HanoiWedding() {
-  const [activeContent, setActiveContent] = useState<ContentKey | "none">(
-    "none"
-  );
+  // const [activeContent, setActiveContent] = useState<ContentKey | "none">(
+  //   "none"
+  // );
   const hanoi = eventDetails.hanoi;
   const mapCenter = { lat: 21.028511, lng: 105.804817 };
   const mapMarkers = [
@@ -68,57 +80,7 @@ export default function HanoiWedding() {
         </div>
       </div>
 
-      <h1 className="text-5xl font-bold font-fraunces flex justify-center items-center my-8">
-        Hanoi Travel Tips
-      </h1>
-      <div className="justify-center flex flex-row flex-wrap items-center">
-        <Button
-          variant="outline"
-          className={buttonClasses(activeContent === "travelDocument")}
-          onClick={() => setActiveContent("travelDocument")}
-        >
-          <Backpack />
-          Travel Document
-        </Button>
-
-        <Button
-          variant="outline"
-          className={buttonClasses(activeContent === "moneyAndCurrency")}
-          onClick={() => setActiveContent("moneyAndCurrency")}
-        >
-          <CircleDollarSign />
-          Money And Currency
-        </Button>
-
-        <Button
-          variant="outline"
-          className={buttonClasses(activeContent === "sim")}
-          onClick={() => setActiveContent("sim")}
-        >
-          <Signal />
-          SIM
-        </Button>
-        <Button
-          variant="outline"
-          className={buttonClasses(activeContent === "healthInsurance")}
-          onClick={() => setActiveContent("healthInsurance")}
-        >
-          <Cross />
-          Health Insurance
-        </Button>
-        <Button
-          variant="outline"
-          className={buttonClasses(activeContent === "immunization")}
-          onClick={() => setActiveContent("immunization")}
-        >
-          <Syringe />
-          Immunization
-        </Button>
-      </div>
-
-      <div className="mt-8 flex flex-col items-center h-[80vh] ">
-        {activeContent !== "none" ? contentMap[activeContent] : <div></div>}
-      </div>
+      <TravelTips headline="Hanoi Travel Tips" contentMap={contentMap} />
     </>
   );
 }

@@ -1,5 +1,5 @@
 const TravelDocument = () => (
-  <div className="w-2/3 avenir">
+  <div className="md:w-1/2 w-2/3 avenir  justify-center items-center flex flex-col">
     <h2 className="font-bold text-xl justify-content flex flex-col items-center mb-5">
       Travel Document Details
     </h2>
