@@ -7,12 +7,12 @@ const Carousel = () => {
     {
       src: "/Linh-2.jpg",
       description:
-      "Jack and Linh first met in Boston, USA in 2019, where their love story began. What started as a Coffee Meets Bagel date quickly turned into something deeper as they navigated their early days together. "
+        "Jack and Linh first met in Boston, USA in 2019, where their love story began. What started as a Coffee Meets Bagel date quickly turned into something deeper as they navigated their early days together. ",
     },
     {
       src: "/Linh-5.jpg",
       description:
-      "Then came the pandemic, a time that brought unexpected challenges but also the chance to grow closer. They spent those uncertain months side by side, sharing laughter, resilience, and the ups and downs of their early 20s."
+        "Then came the pandemic, a time that brought unexpected challenges but also the chance to grow closer. They spent those uncertain months side by side, sharing laughter, resilience, and the ups and downs of their early 20s.",
     },
     {
       src: "/Linh-1.jpg",

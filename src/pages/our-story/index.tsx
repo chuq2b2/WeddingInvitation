@@ -3,7 +3,7 @@ import Carousel from "@/components/Carousel";
 export default function OurStory() {
   return (
     <>
-      <div className="h-screen pb-4">
+      <div className="h-auto">
         <div className="hidden xl:block h-screen">
           <div className="grid grid-cols-12 gap-4 h-full">
             <div className="col-span-1 overflow-hidden">
@@ -67,7 +67,7 @@ export default function OurStory() {
             </div>
           </div>
         </div>
-        <div className="xl:hidden">
+        <div className="xl:hidden mb-28">
           <Carousel />
         </div>
       </div>
