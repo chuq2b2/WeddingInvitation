@@ -16,26 +16,22 @@ import Navigation from "@/components/details/hanoi/Navigation";
 import WhatToDo from "@/components/details/hanoi/WhatToDo";
 import WhereToEat from "@/components/details/hanoi/WhereToEat";
 
-
 const contentMap = {
   travelDocument: <TravelDocument />,
   moneyAndCurrency: <MoneyAndCurrency />,
   SIM: <SIM />,
   healthInsurance: <HealthInsurance />,
   immunization: <Immunization />,
-  accommodation: <Accommodation/>,
-  transportation: <Transportation/>,
-  plugsAndVoltage: <PlugsAndVoltage/>,
-  takesOut: <TakesOut/>,
-  navigation: <Navigation/>,
-  whatToDo: <WhatToDo/>,
-  whereToEat: <WhereToEat/>
+  accommodation: <Accommodation />,
+  transportation: <Transportation />,
+  plugsAndVoltage: <PlugsAndVoltage />,
+  takesOut: <TakesOut />,
+  navigation: <Navigation />,
+  whatToDo: <WhatToDo />,
+  whereToEat: <WhereToEat />,
 };
 
 export default function HanoiWedding() {
-  // const [activeContent, setActiveContent] = useState<ContentKey | "none">(
-  //   "none"
-  // );
   const hanoi = eventDetails.hanoi;
   const mapCenter = { lat: 21.028511, lng: 105.804817 };
   const mapMarkers = [
@@ -81,6 +77,24 @@ export default function HanoiWedding() {
       </div>
 
       <TravelTips headline="Hanoi Travel Tips" contentMap={contentMap} />
+
+      <p className="avenir text-center mb-4">
+        Other guides/tours you can read/explore:
+        <li>
+          <a href="https://whatthephovn.com/" target="_blank">
+            <span className="font-bold text-pink-400">
+              https://whatthephovn.com/
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vietnam.travel/myvietnam" target="_blank">
+            <span className="font-bold text-pink-400">
+              https://vietnam.travel/myvietnam
+            </span>
+          </a>
+        </li>
+      </p>
     </>
   );
 }

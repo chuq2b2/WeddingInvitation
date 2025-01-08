@@ -73,6 +73,20 @@ export default function GuangzhouWedding() {
       </div>
 
       <TravelTips headline="Guangzhou Travel Tips" contentMap={contentMap} />
+
+      <p className="avenir text-center mb-4">
+        Note: Facebook, WhatsApp, Instagram, Google services may not work in
+        China. You may need to download a plugin to keep using these app.
+        <li className="list-none">
+          Check out {" "}
+          <a
+            href="https://www.trip.com/travel-guide-activity/entryGuide/homePage?aid=3305672&sid=26090260"
+            target="_blank"
+          >
+            <span className="font-bold text-pink-400">China Travel Guide</span>
+          </a>
+        </li>
+      </p>
     </>
   );
 }

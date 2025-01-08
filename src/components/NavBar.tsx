@@ -117,17 +117,6 @@ function NavBar() {
             </div>
           )}
         </div>
-        {/* <Link
-          href="/travel-guide"
-          className={`text-sm-plus text-[#383B42] transition-colors ${
-            activeLink === "/travel-guide"
-              ? "text-[#A0AC60]"
-              : "hover:text-[#A0AC60]"
-          }`}
-          onClick={() => handleLinkClick("/travel-guide")}
-        >
-          TRAVEL GUIDE
-        </Link> */}
         <Link
           href="/gallery"
           className={`text-sm-plus text-[#383B42] transition-colors ${
@@ -140,7 +129,7 @@ function NavBar() {
           GALLERY
         </Link>
         <a
-          href="/#our-story"
+          href="/our-story"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "#our-story"
               ? "text-[#A0AC60]"
@@ -151,11 +140,11 @@ function NavBar() {
           OUR STORY
         </a>
         <a
-          href="/#qnas"
+          href="/qnas"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "#qnas" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
           }`}
-          onClick={() => handleLinkClick("#qnas")}
+          onClick={() => handleLinkClick("qnas")}
         >
           Q&AS
         </a>
@@ -230,26 +219,26 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/#our-story"
+              href="/our-story"
               className={`text-sm-plus ${
                 activeLink === "#our-story"
                   ? "text-[#A0AC60]"
                   : "text-[#383B42]"
               } hover:text-[#A0AC60]`}
-              onClick={() => handleLinkClick("#our-story")}
+              onClick={() => handleLinkClick("our-story")}
             >
               OUR STORY
             </a>
           </li>
           <li>
             <a
-              href="/#qnas"
+              href="/qnas"
               className={`text-sm-plus text-[#383B42] transition-colors ${
                 activeLink === "#qnas"
                   ? "text-[#A0AC60]"
                   : "hover:text-[#A0AC60]"
               }`}
-              onClick={() => handleLinkClick("#qnas")}
+              onClick={() => handleLinkClick("qnas")}
             >
               Q&AS
             </a>

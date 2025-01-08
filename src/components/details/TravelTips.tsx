@@ -11,7 +11,7 @@ export default function TravelTips({ headline, contentMap }: TravelTipsProps) {
   const [activeContent, setActiveContent] = useState<string | "none">("none");
 
   const buttonClasses = (isActive: boolean) =>
-    `px-4 py-2 rounded-md transition ${
+    `px-4 py-5 rounded-md transition text-md ${
       isActive ? "bg-gray-800 text-white" : "hover:bg-gray-300"
     }`;
 
