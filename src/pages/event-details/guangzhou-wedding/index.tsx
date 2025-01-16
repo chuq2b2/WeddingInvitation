@@ -47,11 +47,6 @@ export default function GuangzhouWedding() {
 
   return (
     <>
-      <EventInvite
-        location={guangzhou.location}
-        date={guangzhou.date}
-        hotel={guangzhou.hotel}
-      />
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-2/5 flex flex-col justify-center items-center bg-white p-8">
           <h2 className="text-3xl font-bold mb-4">Welcome to Guangzhou</h2>
@@ -77,15 +72,14 @@ export default function GuangzhouWedding() {
       <p className="avenir text-center mb-4">
         Note: Facebook, WhatsApp, Instagram, Google services may not work in
         China. You may need to download a plugin to keep using these app.
-        <li className="list-none">
-          Check out {" "}
-          <a
-            href="https://www.trip.com/travel-guide-activity/entryGuide/homePage?aid=3305672&sid=26090260"
-            target="_blank"
-          >
-            <span className="font-bold text-pink-400">China Travel Guide</span>
-          </a>
-        </li>
+        <br></br>
+        Check out{" "}
+        <a
+          href="https://www.trip.com/travel-guide-activity/entryGuide/homePage?aid=3305672&sid=26090260"
+          target="_blank"
+        >
+          <span className="font-bold text-pink-400">China Travel Guide</span>
+        </a>
       </p>
     </>
   );

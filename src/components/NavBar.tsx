@@ -71,11 +71,11 @@ function NavBar() {
           HOME
         </Link>
         <a
-          href="/#rsvp"
+          href="/rsvp"
           className={`text-sm-plus text-[#383B42] transition-colors ${
-            activeLink === "#rsvp" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
+            activeLink === "rsvp" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
           }`}
-          onClick={() => handleLinkClick("#rsvp")}
+          onClick={() => handleLinkClick("rsvp")}
         >
           RSVP
         </a>
@@ -170,11 +170,11 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/#rsvp"
+              href="/rsvp"
               className={`text-sm-plus ${
-                activeLink === "#rsvp" ? "text-[#A0AC60]" : "text-[#383B42]"
+                activeLink === "rsvp" ? "text-[#A0AC60]" : "text-[#383B42]"
               } hover:text-[#A0AC60]`}
-              onClick={() => handleLinkClick("#rsvp")}
+              onClick={() => handleLinkClick("rsvp")}
             >
               RSVP
             </a>

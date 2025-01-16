@@ -97,24 +97,6 @@ export default function Home() {
           className="object-contain filter brightness-200 w-auto h-auto"
         />
       </div>
-
-      <div className="flex flex-col justify-center items-center py-32">
-        <p className="fraunces text-2xl lg:text-4xl lg:w-1/2 px-16 font-semibold text-[#383B42] text-center animate-fadeIn">
-          “And now here is my secret, a very simple secret: It is only with the
-          heart that one can see rightly; what is essential is invisible to the
-          eye."
-        </p>
-        <p className="avenir text-md pt-4 animate-fadeIn">
-          Antoine de Saint-Exupéry
-        </p>
-      </div>
-
-      <div
-        className="h-screen parallax-full bg-gradient-to-r sm:relative pt-50"
-        style={{
-          backgroundImage: "url('/Linh-13.png')",
-        }}
-      ></div>
     </>
   );
 }
