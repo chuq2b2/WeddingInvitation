@@ -9,7 +9,7 @@ export const eventDetails = {
         { time: "10:30 am", name: "Wedding Reception", location: "TBD", rsvpDate: "March 12, 2025" },
         { time: "11:30 am", name: "Wedding Banquet (lunch)", location: "TBD", rsvpDate: "March 12, 2025" },
       ],
-      rsvpHref: "/event-details/hanoi-wedding",
+      rsvpHref: "/rsvp/hanoi-wedding",
     },
     guangzhou: {
       location: "Guangzhou, China",
@@ -19,6 +19,6 @@ export const eventDetails = {
         { time: "TBD", name: "Wedding Reception", location: "TBD", rsvpDate: "March 12, 2025" },
         { time: "TBD", name: "Wedding Banquet", location: "TBD", rsvpDate: "March 12, 2025" },
       ],
-      rsvpHref: "/event-details/guangzhou-wedding",
+      rsvpHref: "/rsvp/guangzhou-wedding",
     },
   };

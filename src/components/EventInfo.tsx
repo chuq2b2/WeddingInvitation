@@ -22,7 +22,7 @@ const EventInfo: React.FC<EventInfoProps> = ({
   date,
   hotel,
   schedule,
-  rsvpHref
+  rsvpHref,
 }) => {
   return (
     <div className="w-5/9 p-2">
@@ -34,24 +34,30 @@ const EventInfo: React.FC<EventInfoProps> = ({
       <div className="mt-4 avenir text-base">
         {schedule.map((event, index) => (
           <div key={index} className="flex justify-between mt-2">
-            <span className="text-[#A0AC60] font-bold text-xl ">{event.time}</span>
+            <span className="text-[#A0AC60] font-bold text-xl ">
+              {event.time}
+            </span>
             <span>
               <div className="flex-col text-end justify-end">
-              {event.name} 
-              <br></br>
-              {event.location}
+                {event.name}
+                <br></br>
+                {event.location}
               </div>
             </span>
           </div>
         ))}
       </div>
       <div className="text-center mt-6">
-        <a href={rsvpHref} className="bg-[#A0AC60] text-white p-2 rounded-full pl-4 pr-4 hover:bg-white hover:opacity-50 hover:text-black border-1 hover:border-black hover:border-solid border-transparent border-2 transition duration-300 ease-in-out">
+        <a
+          href={rsvpHref}
+          className="bg-[#A0AC60] text-white p-2 rounded-full pl-4 pr-4 hover:bg-white hover:opacity-50 hover:text-black border-1 hover:border-black hover:border-solid border-transparent border-2 transition duration-300 ease-in-out"
+        >
           RSVP
         </a>
       </div>
       <p className="text-center avenir text-sm mt-4">
-        Please confirm your attendance by {schedule[0].rsvpDate}
+        Please confirm your attendance by{" "}
+        {schedule[0]?.rsvpDate || "loading..."}
       </p>
     </div>
   );

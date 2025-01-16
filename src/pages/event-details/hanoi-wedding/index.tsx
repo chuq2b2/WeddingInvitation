@@ -52,11 +52,6 @@ export default function HanoiWedding() {
 
   return (
     <>
-      <EventInvite
-        location={hanoi.location}
-        date={hanoi.date}
-        hotel={hanoi.hotel}
-      />
       <div className="flex flex-col md:flex-row h-screen">
         <div className="w-full md:w-2/5 flex flex-col justify-center items-center bg-white p-8">
           <h2 className="text-3xl font-bold mb-4">Welcome to Hanoi</h2>
@@ -80,20 +75,18 @@ export default function HanoiWedding() {
 
       <p className="avenir text-center mb-4">
         Other guides/tours you can read/explore:
-        <li>
-          <a href="https://whatthephovn.com/" target="_blank">
-            <span className="font-bold text-pink-400">
-              https://whatthephovn.com/
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="https://vietnam.travel/myvietnam" target="_blank">
-            <span className="font-bold text-pink-400">
-              https://vietnam.travel/myvietnam
-            </span>
-          </a>
-        </li>
+        <br></br>
+        <a href="https://whatthephovn.com/" target="_blank">
+          <span className="font-bold text-pink-400">
+            https://whatthephovn.com/
+          </span>
+        </a>
+        <br></br>
+        <a href="https://vietnam.travel/myvietnam" target="_blank">
+          <span className="font-bold text-pink-400">
+            https://vietnam.travel/myvietnam
+          </span>
+        </a>
       </p>
     </>
   );
