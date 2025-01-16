@@ -16,14 +16,16 @@ function NavBar() {
     <nav className="flex justify-between items-center px-6 py-4 bg-transparent m-8">
       {/* Logo */}
       <div className="logo-container w-full lg:w-1/5 flex justify-center lg:justify-start">
-        <Image
-          src="/signature.avif"
-          alt="Signature"
-          width={138}
-          height={31}
-          style={{ width: "138px", height: "31px" }}
-          priority={false}
-        />
+        <a href="/" onClick={() => handleLinkClick("/")}>
+          <Image
+            src="/signature.avif"
+            alt="Signature"
+            width={138}
+            height={31}
+            style={{ width: "138px", height: "31px" }}
+            priority={false}
+          />
+        </a>
       </div>
 
       {/* Hamburger Menu Icon */}
@@ -58,7 +60,7 @@ function NavBar() {
       </div>
 
       {/* Navbar Links */}
-      <div className="hidden lg:flex space-x-10">
+      <div className="hidden lg:flex space-x-10 items-center">
         <Link
           href="/"
           className={`text-sm-plus text-[#383B42] transition-colors ${
@@ -78,7 +80,7 @@ function NavBar() {
           RSVP
         </a>
         <div
-          className="relative group"
+          className="relative group "
           onMouseEnter={() => setIsDropdownOpen(true)}
         >
           <a
@@ -92,7 +94,10 @@ function NavBar() {
           </a>
           {/* Dropdown Menu */}
           {isDropdownOpen && (
-            <div className="absolute -left-8 mt-2 w-36 text-right bg-white shadow-lg z-10" onMouseLeave={() => setIsDropdownOpen(false)}>
+            <div
+              className="absolute -left-8 mt-2 w-36 text-right bg-white shadow-lg z-10"
+              onMouseLeave={() => setIsDropdownOpen(false)}
+            >
               <Link
                 href="/event-details/hanoi-wedding"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -103,24 +108,15 @@ function NavBar() {
               <Link
                 href="/event-details/guangzhou-wedding"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                onClick={() => handleLinkClick("/event-details/guangzhou-wedding")}
+                onClick={() =>
+                  handleLinkClick("/event-details/guangzhou-wedding")
+                }
               >
                 GUANGZHOU
               </Link>
             </div>
           )}
         </div>
-        {/* <Link
-          href="/travel-guide"
-          className={`text-sm-plus text-[#383B42] transition-colors ${
-            activeLink === "/travel-guide"
-              ? "text-[#A0AC60]"
-              : "hover:text-[#A0AC60]"
-          }`}
-          onClick={() => handleLinkClick("/travel-guide")}
-        >
-          TRAVEL GUIDE
-        </Link> */}
         <Link
           href="/gallery"
           className={`text-sm-plus text-[#383B42] transition-colors ${
@@ -133,7 +129,7 @@ function NavBar() {
           GALLERY
         </Link>
         <a
-          href="/#our-story"
+          href="/our-story"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "#our-story"
               ? "text-[#A0AC60]"
@@ -144,11 +140,11 @@ function NavBar() {
           OUR STORY
         </a>
         <a
-          href="/#qnas"
+          href="/qnas"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "#qnas" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
           }`}
-          onClick={() => handleLinkClick("#qnas")}
+          onClick={() => handleLinkClick("qnas")}
         >
           Q&AS
         </a>
@@ -223,26 +219,26 @@ function NavBar() {
           </li>
           <li>
             <a
-              href="/#our-story"
+              href="/our-story"
               className={`text-sm-plus ${
                 activeLink === "#our-story"
                   ? "text-[#A0AC60]"
                   : "text-[#383B42]"
               } hover:text-[#A0AC60]`}
-              onClick={() => handleLinkClick("#our-story")}
+              onClick={() => handleLinkClick("our-story")}
             >
               OUR STORY
             </a>
           </li>
           <li>
             <a
-              href="/#qnas"
+              href="/qnas"
               className={`text-sm-plus text-[#383B42] transition-colors ${
                 activeLink === "#qnas"
                   ? "text-[#A0AC60]"
                   : "hover:text-[#A0AC60]"
               }`}
-              onClick={() => handleLinkClick("#qnas")}
+              onClick={() => handleLinkClick("qnas")}
             >
               Q&AS
             </a>

@@ -46,7 +46,7 @@ const EventInvite: React.FC<InviteProps> = ({ location, date, hotel }) => {
             {date}
           </p>
           <h1 className="text-md sm:text-lg md:text-xl avenir text-[#383B42]">
-            At {hotel}, {location}
+           {location}
           </h1>
         </div>
       </div>
