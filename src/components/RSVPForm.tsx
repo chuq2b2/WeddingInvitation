@@ -18,7 +18,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
   availableDates,
   onRSVPSubmit,
 }) => {
-  const [partyInterest, setPartyInterest] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [formErrors, setFormErrors] = useState<string[]>([]);
@@ -35,20 +34,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
       }
     }
 
-    if (
-      (partyInterest === "yes" || partyInterest === "maybe") &&
-      !selectedDate
-    ) {
-      errors.push("Please select a date for the bachelor/bachelorette party.");
-    }
-
-    if (
-      (partyInterest === "yes" || partyInterest === "maybe") &&
-      !selectedTime
-    ) {
-      errors.push("Please select a time for the bachelor/bachelorette party.");
-    }
-
     if (errors.length > 0) {
       setFormErrors(errors);
       return;
@@ -57,7 +42,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
     const rsvpData = {
       name: formData.get("name"),
       email: formData.get("email"),
-      partyInterest,
       selectedDate,
       selectedTime,
       weddingAttendance: formData.get("weddingAttendance"),
@@ -108,70 +92,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
 
       <div className="mb-4">
         <label className="block font-semibold mb-2">
-          Are you interested in attending the bachelor/bachelorette party?*
-        </label>
-        <select
-          name="partyInterest"
-          className="w-full p-2 border rounded-md border-pink-200"
-          value={partyInterest}
-          onChange={(e) => setPartyInterest(e.target.value)}
-          required
-        >
-          <option value="">Select</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-          <option value="maybe">Maybe</option>
-        </select>
-      </div>
-
-      {partyInterest === "yes" || partyInterest === "maybe" ? (
-        <>
-          <div className="mb-4">
-            <label className="block font-semibold mb-2">
-              Which day are you available?
-            </label>
-            <select
-              name="availableDate"
-              className="w-full p-2 border rounded-md border-pink-200"
-              value={selectedDate}
-              onChange={(e) => setSelectedDate(e.target.value)}
-              required
-            >
-              <option value="">Select</option>
-              {availableDates.map((day, index) => (
-                <option key={index} value={day.date}>
-                  {day.date}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div className="mb-4">
-            <label className="block font-semibold mb-2">
-              Which time are you available?
-            </label>
-            <select
-              name="availableTime"
-              className="w-full p-2 border rounded-md border-pink-200"
-              value={selectedTime}
-              onChange={(e) => setSelectedTime(e.target.value)}
-              required
-            >
-              <option value="">Select</option>
-              {availableDates
-                .find((day) => day.date === selectedDate)
-                ?.times.map((time, index) => (
-                  <option key={index} value={time}>
-                    {time}
-                  </option>
-                ))}
-            </select>
-          </div>
-        </>
-      ) : null}
-
-      <div className="mb-4">
-        <label className="block font-semibold mb-2">
           Will you attend our Wedding Ceremony in {location} on {eventDate}?*
         </label>
         <select
@@ -196,6 +116,15 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
           min="0"
           max="1"
           required
+        />
+      </div>
+
+      <div className="mb-4">
+        <label className="block font-semibold mb-2">Anything else we should know? (e.g. Any food allergy/restriction)</label>
+        <input
+          name="name"
+          type="text"
+          className="w-full p-2 border rounded-md border-pink-200"
         />
       </div>
 
