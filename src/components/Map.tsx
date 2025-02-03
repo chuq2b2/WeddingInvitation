@@ -1,11 +1,20 @@
-import React from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import React, { useState, useEffect } from "react";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 
 interface MapProps {
   apiKey: string;
   center: { lat: number; lng: number };
   zoom: number;
-  markers?: { id: string; position: { lat: number; lng: number } }[];
+  markers?: {
+    id: string;
+    position: { lat: number; lng: number };
+    googleMapsLink: string;
+  }[];
 }
 
 const Map: React.FC<MapProps> = ({ apiKey, center, zoom, markers = [] }) => {
@@ -52,6 +61,30 @@ const Map: React.FC<MapProps> = ({ apiKey, center, zoom, markers = [] }) => {
     },
   ];
 
+  const [selectedMarker, setSelectedMarker] = useState<{
+    id: string;
+    position: { lat: number; lng: number };
+    googleMapsLink: string;
+    address?: string;
+  } | null>(null);
+
+  useEffect(() => {
+    if (selectedMarker) {
+      const geocoder = new google.maps.Geocoder();
+      geocoder.geocode(
+        { location: selectedMarker.position },
+        (results, status) => {
+          if (status === "OK" && results && results[0]) {
+            setSelectedMarker((prev) => ({
+              ...prev!,
+              address: results[0].formatted_address,
+            }));
+          }
+        }
+      );
+    }
+  }, [selectedMarker]);
+
   return (
     <LoadScript googleMapsApiKey={apiKey}>
       <GoogleMap
@@ -62,8 +95,27 @@ const Map: React.FC<MapProps> = ({ apiKey, center, zoom, markers = [] }) => {
           styles: customMapStyles,
         }}>
         {markers.map((marker) => (
-          <Marker key={marker.id} position={marker.position} />
+          <Marker
+            key={marker.id}
+            position={marker.position}
+            onClick={() => setSelectedMarker(marker)}
+          />
         ))}
+        {selectedMarker && (
+          <InfoWindow
+            position={selectedMarker.position}
+            onCloseClick={() => setSelectedMarker(null)}>
+            <div>
+              <p>{selectedMarker.address || "Loading address..."}</p>
+              <button
+                onClick={() =>
+                  window.open(selectedMarker.googleMapsLink, "_blank")
+                }>
+                View on Google Maps
+              </button>
+            </div>
+          </InfoWindow>
+        )}
       </GoogleMap>
     </LoadScript>
   );
