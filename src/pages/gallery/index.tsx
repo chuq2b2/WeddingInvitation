@@ -28,7 +28,7 @@ export default function Gallery() {
         ].map((row, index) => (
           <div
             key={index}
-            className={`grid grid-cols-1 sm:grid-cols-${index % 2 === 0 ? "2" : "3"} gap-4 fade-in-up opacity-0`}
+            className={`grid grid-cols-1 sm:grid-cols-${index % 2 === 0 ? "2" : "3"} gap-4 fade-in-up`}
           >
             {row.map((src, idx) => (
               <div key={idx} className="p-10 text-center">
