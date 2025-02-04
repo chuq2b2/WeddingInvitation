@@ -8,7 +8,7 @@ export default function useScrollAnimation() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fadeInUp");
+            entry.target.classList.add("animate-fadeIn");
             entry.target.classList.remove("opacity-0");
           }
         });
