@@ -38,10 +38,12 @@ export default function HanoiWedding() {
     {
       id: "hanoi-location",
       position: mapCenter,
+      googleMapsLink: "https://maps.app.goo.gl/Q2SR8LfyttePW8a38",
     },
     {
       id: "guangzhou-location",
       position: { lat: 23.12911, lng: 113.264385 },
+      googleMapsLink: "",
     },
   ];
 
