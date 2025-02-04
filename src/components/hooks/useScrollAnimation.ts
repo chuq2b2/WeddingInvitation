@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function useScrollAnimation() {
   useEffect(() => {
-    const items = document.querySelectorAll(".fade-in-up");
+    const elements = document.querySelectorAll(".fade-in-up");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -16,10 +16,10 @@ export default function useScrollAnimation() {
       { threshold: 0.2 }
     );
 
-    items.forEach((item) => observer.observe(item));
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      items.forEach((item) => observer.unobserve(item));
+      elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
 }
