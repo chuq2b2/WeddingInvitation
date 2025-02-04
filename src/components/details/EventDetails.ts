@@ -4,7 +4,7 @@ export const eventDetails = {
     hanoi: {
       location: "Hanoi, Vietnam",
       date: "Thursday, June 12th, 2025",
-      hotel: "TBD Hotel",
+      hotel: "Cung Van Hoa Lao Dong Huu Nghi Viet - Xo",
       schedule: [
         { time: "10:30 am", name: "Wedding Reception", location: "TBD", rsvpDate: "March 12, 2025" },
         { time: "11:30 am", name: "Wedding Banquet (lunch)", location: "TBD", rsvpDate: "March 12, 2025" },

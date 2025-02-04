@@ -4,7 +4,7 @@ export default function QnAs() {
   return (
     <>
       <div
-        className="h-screen justify-center flex flex-col items-center"
+        className="justify-center flex flex-col items-center mb-20"
       >
         <h1 className="fraunces font-bold lg:text-5xl text-3xl my-10 text-[#A0AC60]">
           Questions and Answers

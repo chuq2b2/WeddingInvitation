@@ -20,7 +20,7 @@ export default function TravelTips({ headline, contentMap }: TravelTipsProps) {
       <h1 className="text-3xl md:text-5xl font-bold text-[#383B42] font-fraunces flex justify-center items-center my-8">
         {headline}
       </h1>
-      <div className="justify-center flex flex-row flex-wrap items-center md:w-2/3 mx-auto">
+      <div className="justify-center flex flex-row flex-wrap items-center md:w-2/3 mx-auto w-3/4">
         {Object.keys(contentMap).map((key) => (
           <Button
             key={key}
@@ -46,7 +46,7 @@ export default function TravelTips({ headline, contentMap }: TravelTipsProps) {
         ))}
       </div>
       <div className="mt-8 flex flex-col items-center pb-24">
-        {activeContent !== "none" ? contentMap[activeContent] : <div></div>}
+        {activeContent !== "none" ? contentMap[activeContent] : <div className="h-20 sm:h-60"></div>}
       </div>
     </div>
   );
