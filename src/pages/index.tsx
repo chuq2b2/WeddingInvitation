@@ -23,6 +23,7 @@ export default function Home() {
               <span className="text-[#A0AC60]"> & </span> Linh
             </span>
           </h1>
+       
           <div className="text-base avenir flex items-center animate-slideFromBottom">
             Hanoi
             <svg
@@ -32,10 +33,13 @@ export default function Home() {
             >
               <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z" />
             </svg>
-            <span className="flex-col fraunces text-[#A0AC60] text-3xl font-extrabold m-5 animate-slideFromBottom [animation-delay:0.3s]">
-              <p>12.6.25</p>
-              <p>21.6.25</p>
+            <span className="flex-col fraunces text-[#A0AC60] text-3xl font-extrabold  animate-slideFromBottom [animation-delay:0.3s]">
+              <p>June 12th, 2025</p>
             </span>
+            
+          </div>
+          <div className="text-base avenir flex items-center animate-slideFromBottom">
+            Guangzhou
             <svg
               className="inline-block w-1 h-1 m-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +47,9 @@ export default function Home() {
             >
               <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z" />
             </svg>
-            Guangzhou
+            <span className="flex-col fraunces text-[#A0AC60] text-3xl font-extrabold animate-slideFromBottom [animation-delay:0.3s]">
+              <p>June 21st, 2025</p>
+            </span>
           </div>
         </div>
 
