@@ -16,8 +16,24 @@ const Footer: React.FC = () => {
           style={{ width: "214px", height: "48px" }}
           priority={false}
         />
-        <p className="mb-2 avenir pt-2">Contact Us</p>
-        <p className="text-sm text-gray-600 avenir">© 2024 by Jack & Linh</p>
+        <p className="mb-2 avenir pt-2">Acknowledgement</p>
+        <p className="text-sm text-gray-600 avenir">© 2024</p>
+        <p className="text-sm text-gray-600 avenir">UNIX Design: Ha Huynh</p>
+        <p className="text-sm text-gray-600 avenir">Front End Dev: Quynh Chu</p>
+        <p className="text-sm text-gray-600 avenir">
+          Back End Dev: Quynh Chu and Tom Nguyen
+        </p>
+        <p className="text-sm text-gray-600 avenir">
+          Content Dev: Linh Chu and Jack Weng
+        </p>
+        <p className="mb-2 avenir pt-2">Gallery</p>
+        <p className="text-sm text-gray-600 avenir">
+          Photographers: Ha Huynh and Quynh Chu
+        </p>
+        <p className="text-sm text-gray-600 avenir">Makeup artist: Quynh Chu</p>
+        <p className="text-sm text-gray-600 avenir">
+          Hair, dress and floral stylist: Ha Huynh
+        </p>
       </div>
     </footer>
   );

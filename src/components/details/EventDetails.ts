@@ -3,7 +3,7 @@
 export const eventDetails = {
     hanoi: {
       location: "Hanoi, Vietnam",
-      date: "Thursday, June 12, 2025",
+      date: "Thursday, June 12th, 2025",
       hotel: "TBD Hotel",
       schedule: [
         { time: "10:30 am", name: "Wedding Reception", location: "TBD", rsvpDate: "March 12, 2025" },
@@ -13,7 +13,7 @@ export const eventDetails = {
     },
     guangzhou: {
       location: "Guangzhou, China",
-      date: "Saturday, June 21, 2025",
+      date: "Saturday, June 21st, 2025",
       hotel: "TBD Hotel",
       schedule: [
         { time: "TBD", name: "Wedding Reception", location: "TBD", rsvpDate: "March 12, 2025" },
