@@ -19,30 +19,52 @@ export default function Gallery() {
 
       {/* Image Grid */}
       <div className="grid gap-4 p-6">
-        {[
-          ["/Linh-20.jpg", "/Linh-19.jpg"], // 2 Images
-          ["/Linh-6.jpg", "/Linh-27.jpg", "/Linh-15.jpg"], // 3 Images
-          ["/Linh-17.jpg", "/Linh-18.jpg"], // 2 Images
-          ["/Linh-34.jpg", "/Linh-14.jpg", "/Linh-8.jpg"], // 3 Images
-          ["/Linh-33.jpg", "/Linh-26.jpg"], // 2 Images
-        ].map((row, index) => (
-          <div
-            key={index}
-            className={`grid grid-cols-1 sm:grid-cols-${index % 2 === 0 ? "2" : "3"} gap-4 fade-in-up`}
-          >
-            {row.map((src, idx) => (
-              <div key={idx} className="p-10 text-center">
-                <Image 
-                  src={src} 
-                  width={400} 
-                  height={600} 
-                  alt={`Gallery Image ${idx}`} 
-                  className="w-full h-auto"
-                />
-              </div>
-            ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in-up opacity-0">
+          <div className=" p-10 text-center">
+            <img src="/Linh-20.jpg" />
           </div>
-        ))}
+          <div className=" p-10 text-center">
+            <img src="/Linh-19.jpg" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 fade-in-up  opacity-0">
+          <div className=" p-10 text-center">
+            <img src="/Linh-6.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-27.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-15.jpg" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in-up  opacity-0">
+          <div className=" p-10 text-center">
+            <img src="/Linh-17.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-18.jpg" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 fade-in-up  opacity-0">
+          <div className=" p-10 text-center">
+            <img src="/Linh-34.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-14.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-8.jpg" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in-up  opacity-0">
+          <div className=" p-10 text-center">
+            <img src="/Linh-33.jpg" />
+          </div>
+          <div className=" p-10 text-center">
+            <img src="/Linh-26.jpg" />
+          </div>
+        </div>
       </div>
     </>
   );
