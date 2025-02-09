@@ -8,7 +8,7 @@ interface RSVPFormProps {
     date: string;
     times: string[];
   }[];
-  onRSVPSubmit: (data: Record<string, any>) => void; // Callback for emitting submitted data
+  onRSVPSubmit: (data: Record<string, any>) => void;
 }
 
 const RSVPForm: React.FC<RSVPFormProps> = ({
@@ -22,7 +22,7 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
   const [selectedTime, setSelectedTime] = useState("");
   const [formErrors, setFormErrors] = useState<string[]>([]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errors: string[] = [];
     const formData = new FormData(e.currentTarget as HTMLFormElement);
@@ -42,17 +42,34 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
     const rsvpData = {
       name: formData.get("name"),
       email: formData.get("email"),
-      selectedDate,
-      selectedTime,
       weddingAttendance: formData.get("weddingAttendance"),
       plusOne: formData.get("plusOne"),
+      note: formData.get("note"),
+      location
     };
 
-    onRSVPSubmit(rsvpData); // Emit the submitted data to the parent
+    try {
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(rsvpData),
+      });
+
+      const data = await response.json();
+      console.log("RSVP Submission Response:", data);
+      console.log(rsvpData);
+
+      onRSVPSubmit(rsvpData);
+    } catch (error) {
+      console.error("Error submitting RSVP:", error);
+    }
   };
 
   return (
-    <form className="p-4 rounded-md md:w-1/2 w-2/3 avenir pb-24" onSubmit={handleSubmit}>
+    <form
+      className="p-4 rounded-md md:w-1/2 w-2/3 avenir pb-24"
+      onSubmit={handleSubmit}
+    >
       <h1 className="text-2xl md:text-5xl font-bold mb-4 text-center font-fraunces">
         RSVP for {location}
       </h1>
@@ -100,8 +117,8 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
           required
         >
           <option value="">Select</option>
-          <option value="yes">Happily Accept</option>
-          <option value="no">Respectfully Decline</option>
+          <option value="Accept">Happily Accept</option>
+          <option value="Decline">Respectfully Decline</option>
         </select>
       </div>
 
@@ -109,20 +126,24 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
         <label className="block font-semibold mb-2">
           Are you bringing a plus one?
         </label>
-        <input
+        <select
           name="plusOne"
-          type="number"
           className="w-1/5 p-2 border rounded-md border-pink-200"
-          min="0"
-          max="1"
           required
-        />
+        >
+          <option value="">Select</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Not Sure">Not Sure</option>
+        </select>
       </div>
 
       <div className="mb-4">
-        <label className="block font-semibold mb-2">Anything else we should know? (e.g. Any food allergy/restriction)</label>
+        <label className="block font-semibold mb-2">
+          Anything else we should know? (e.g. Any food allergy/restriction)
+        </label>
         <input
-          name="name"
+          name="note"
           type="text"
           className="w-full p-2 border rounded-md border-pink-200"
         />
