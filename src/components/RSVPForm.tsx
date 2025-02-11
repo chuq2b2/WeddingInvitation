@@ -18,8 +18,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
   availableDates,
   onRSVPSubmit,
 }) => {
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState("");
   const [formErrors, setFormErrors] = useState<string[]>([]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -57,7 +55,6 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
 
       const data = await response.json();
       console.log("RSVP Submission Response:", data);
-      console.log(rsvpData);
 
       onRSVPSubmit(rsvpData);
     } catch (error) {
