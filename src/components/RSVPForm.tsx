@@ -123,15 +123,19 @@ const RSVPForm: React.FC<RSVPFormProps> = ({
         <label className="block font-semibold mb-2">
           Are you bringing a plus one?
         </label>
-        <input
+        <select
           name="plusOne"
-          type="number"
           className="w-1/5 p-2 border rounded-md border-pink-200"
-          min="0"
-          max="1"
           required
         >
-        </input>
+          <option value="">Select</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       </div>
 
       <div className="mb-4">
