@@ -34,7 +34,7 @@ export default function Home() {
               <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z" />
             </svg>
             <span className="flex-col fraunces text-[#A0AC60] text-3xl font-extrabold  animate-slideFromBottom [animation-delay:0.3s]">
-              <p>June 12th, 2025</p>
+              <p className="fraunces">June 12th, 2025</p>
             </span>
             
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
               <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z" />
             </svg>
             <span className="flex-col fraunces text-[#A0AC60] text-3xl font-extrabold animate-slideFromBottom [animation-delay:0.3s]">
-              <p>June 21st, 2025</p>
+              <p className="fraunces">June 21st, 2025</p>
             </span>
           </div>
         </div>
