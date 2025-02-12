@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           priority={false}
         />
         <p className="mb-2 avenir pt-2">Acknowledgement</p>
-        <p className="text-sm text-gray-600 avenir">© 2024</p>
+        <p className="text-sm text-gray-600 avenir">© 2025</p>
         <p className="text-sm text-gray-600 avenir">UNIX Design: Ha Huynh</p>
         <p className="text-sm text-gray-600 avenir">Front End Dev: Quynh Chu</p>
         <p className="text-sm text-gray-600 avenir">

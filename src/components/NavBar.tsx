@@ -70,7 +70,7 @@ function NavBar() {
         >
           HOME
         </Link>
-        <a
+        <Link
           href="/rsvp"
           className={`text-sm-plus text-[#383B42] transition-colors ${
             activeLink === "rsvp" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
@@ -78,7 +78,7 @@ function NavBar() {
           onClick={() => handleLinkClick("rsvp")}
         >
           RSVP
-        </a>
+        </Link>
         <div
           className="relative group "
           onMouseEnter={() => setIsDropdownOpen(true)}
@@ -128,26 +128,26 @@ function NavBar() {
         >
           GALLERY
         </Link>
-        <a
+        <Link
           href="/our-story"
           className={`text-sm-plus text-[#383B42] transition-colors ${
-            activeLink === "#our-story"
+            activeLink === "/our-story"
               ? "text-[#A0AC60]"
               : "hover:text-[#A0AC60]"
           }`}
-          onClick={() => handleLinkClick("#our-story")}
+          onClick={() => handleLinkClick("/our-story")}
         >
           OUR STORY
-        </a>
-        <a
+        </Link>
+        <Link
           href="/qnas"
           className={`text-sm-plus text-[#383B42] transition-colors ${
-            activeLink === "#qnas" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
+            activeLink === "/qnas" ? "text-[#A0AC60]" : "hover:text-[#A0AC60]"
           }`}
-          onClick={() => handleLinkClick("qnas")}
+          onClick={() => handleLinkClick("/qnas")}
         >
           Q&AS
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu */}
@@ -221,11 +221,11 @@ function NavBar() {
             <a
               href="/our-story"
               className={`text-sm-plus ${
-                activeLink === "#our-story"
+                activeLink === "/our-story"
                   ? "text-[#A0AC60]"
                   : "text-[#383B42]"
               } hover:text-[#A0AC60]`}
-              onClick={() => handleLinkClick("our-story")}
+              onClick={() => handleLinkClick("/our-story")}
             >
               OUR STORY
             </a>
@@ -234,11 +234,11 @@ function NavBar() {
             <a
               href="/qnas"
               className={`text-sm-plus text-[#383B42] transition-colors ${
-                activeLink === "#qnas"
+                activeLink === "/qnas"
                   ? "text-[#A0AC60]"
                   : "hover:text-[#A0AC60]"
               }`}
-              onClick={() => handleLinkClick("qnas")}
+              onClick={() => handleLinkClick("/qnas")}
             >
               Q&AS
             </a>
