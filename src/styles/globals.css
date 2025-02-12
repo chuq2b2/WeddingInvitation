@@ -11,21 +11,21 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("/fonts/Avenir.ttf") format("ttf");
+  src: url("/public/fonts/Avenir.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Didot";
-  src: url("/fonts/Didot W01 Italic.ttf") format("ttf");
+  src: url("/public/fonts/Didot\ W01\ Italic.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Fraunces";
-  src: url("/fonts/Fraunces_120pt_SuperSoft-SemiBold.ttf") format("ttf");
+  src: url("/public/fonts/Fraunces_120pt_SuperSoft-SemiBold.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
