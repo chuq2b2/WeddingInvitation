@@ -11,21 +11,21 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("/public/fonts/Avenir.ttf") format("ttf");
+  src: url("/fonts/Avenir.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Didot";
-  src: url("/public/fonts/Didot\ W01\ Italic.ttf") format("ttf");
+  src: url("/fonts/DidoItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Fraunces";
-  src: url("/public/fonts/Fraunces_120pt_SuperSoft-SemiBold.ttf") format("ttf");
+  src: url("/fonts/Fraunces_120pt_SuperSoft-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -40,7 +40,7 @@ body {
 body {
   color: var(--foreground);
   background-color: var(--background);
-  font-family: Helvetica, sans-serif;
+  font-family: "Avenir", Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
