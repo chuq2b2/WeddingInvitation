@@ -20,6 +20,7 @@ export default function RSVP() {
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
           <EventInfo
             location={hanoiDetails.location}
+            locationHref={hanoiDetails.locationHref}
             date={hanoiDetails.date}
             hotel={hanoiDetails.hotel}
             schedule={hanoiDetails.schedule}
@@ -29,6 +30,7 @@ export default function RSVP() {
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
           <EventInfo
             location={guangzhouDetails.location}
+            locationHref={guangzhouDetails.locationHref}
             date={guangzhouDetails.date}
             hotel={guangzhouDetails.hotel}
             schedule={guangzhouDetails.schedule}

@@ -11,6 +11,7 @@ interface ScheduleItem {
 
 interface EventInfoProps {
   location: string;
+  locationHref: string;
   date: string;
   hotel: string;
   schedule: ScheduleItem[];
@@ -19,6 +20,7 @@ interface EventInfoProps {
 
 const EventInfo: React.FC<EventInfoProps> = ({
   location,
+  locationHref,
   date,
   hotel,
   schedule,
@@ -29,7 +31,14 @@ const EventInfo: React.FC<EventInfoProps> = ({
       <h1 className=" text-xl avenir text-[#383B42] text-center">{location}</h1>
       <p className="text-4xl mt-4 fraunces text-center font-bold">{date}</p>
       <h1 className=" text-xl mt-4 avenir text-[#383B42] text-center">
-        {hotel}
+        <a
+          href={locationHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" hover:text-blue-800 hover:underline"
+        >
+          {hotel}
+        </a>
       </h1>
       <div className="mt-4 avenir text-base">
         {schedule.map((event, index) => (

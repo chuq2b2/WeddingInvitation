@@ -3,6 +3,7 @@
 export const eventDetails = {
     hanoi: {
       location: "Hanoi, Vietnam",
+      locationHref: "https://maps.app.goo.gl/rjxmBC8sb94niXLu8",
       date: "Thursday, June 12th, 2025",
       hotel: "Cung Van Hoa Lao Dong Huu Nghi Viet - Xo",
       schedule: [
@@ -13,6 +14,7 @@ export const eventDetails = {
     },
     guangzhou: {
       location: "Guangzhou, China",
+      locationHref: "",
       date: "Saturday, June 21st, 2025",
       hotel: "TBD Hotel",
       schedule: [

@@ -3,7 +3,7 @@ const WhatToDo = () => (
     <h2 className="font-bold text-xl justify-content flex flex-col items-center mb-5">
       What To Do
     </h2>
-    Here are some recommended dishes:
+    Here are some recommended places to visit:
     <ul className="list-disc">
       <li className="pb-3">
         Guangzhou
