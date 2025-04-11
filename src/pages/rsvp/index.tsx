@@ -16,7 +16,7 @@ export default function RSVP() {
           RSVP The Wedding You're Attending
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row space-y-10 p-8 md:p-12 gap-5">
+      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 p-8 md:p-12 gap-5">
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
           <EventInfo
             location={hanoiDetails.location}
