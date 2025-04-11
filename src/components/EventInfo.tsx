@@ -64,10 +64,6 @@ const EventInfo: React.FC<EventInfoProps> = ({
           RSVP
         </a>
       </div>
-      <p className="text-center avenir text-sm mt-4">
-        Please confirm your attendance by{" "}
-        {schedule[0]?.rsvpDate || "loading..."}
-      </p>
     </div>
   );
 };
